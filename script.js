@@ -1,3 +1,4 @@
+//funçao de teste
 function calcular() {
   const operacao = document.getElementById("add").value;
 
@@ -21,18 +22,21 @@ function calcular() {
 function operacaoBinarios() {
   const binarios = document.getElementById("binarios").value;
   const numBinario = document.getElementById("numBinario").value;
-  let resultado = ""
-  for(let i = 0; i <=7; i++) {
-    let j = numBinario[i];
-    if (numBinario[i] == "0") {
-      j = "1";
+  let resultado = []
+  if (binarios == "complemento1") {
+    for(let i = 0; i <=7; i++) {
+      let j = numBinario[i];
+      if (numBinario[i] == "0") {
+        j = "1";
+      }
+      else {
+        j = "0";
+      }
+      resultado.push(j);
     }
-    else {
-      j = "0";
-    }
-    resultado = resultado + j;
+    const mostrarBinario = document.getElementById("mostrarBinario");
+    mostrarBinario.textContent = resultado.join('')
   }
-  const mostrarBinario = document.getElementById("mostrarBinario");
-  mostrarBinario.textContent = resultado
+  
 
 }
