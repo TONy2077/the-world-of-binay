@@ -34,9 +34,7 @@ function operacaoBinarios() {
       }
       resultado.push(j);
     }
-    const mostrarBinario = document.getElementById("mostrarBinario");
-    mostrarBinario.textContent = resultado.join('')
+      const mostrarBinario = document.getElementById("mostrarBinario");
+      mostrarBinario.textContent = resultado.join('');
   }
-  
-
 }
